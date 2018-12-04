@@ -20,7 +20,7 @@ public class HomePage_001_CheckHomeText_Test extends BaseParpare{
 	  LoginPageHelper.typeLoginInfo(seleniumUtil,data.get("USERNAME"), data.get("PASSWORD"));
 	  //等待首页元素加载完毕
 	  HomePageHelper.waitHomePageLoad(seleniumUtil, timeOut);
-	  //检查首页文本是不是显示正确
+	  //检查首页文本是不是显示正确123
 	  HomePageHelper.checkHomeText(seleniumUtil);
   }
 }
