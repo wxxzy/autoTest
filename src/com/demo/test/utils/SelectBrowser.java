@@ -28,6 +28,7 @@ public class SelectBrowser {
 		/** 声明好驱动的路径 */
 		String chromedriver_win = PropertiesDataProvider.getTestData(driverConfgFilePath, "chromedriver_win");
 		String chromedriver_linux = PropertiesDataProvider.getTestData(driverConfgFilePath, "chromedriver_linux");
+		String firefoxdriver_linux = PropertiesDataProvider.getTestData(driverConfgFilePath, "firefoxdriver_linux");
 		String chromedriver_mac = PropertiesDataProvider.getTestData(driverConfgFilePath, "chromedriver_mac");
 		String ghostdriver_win = PropertiesDataProvider.getTestData(driverConfgFilePath, "ghostdriver_win");
 		String iedriver = PropertiesDataProvider.getTestData(driverConfgFilePath, "iedriver");
@@ -69,6 +70,7 @@ public class SelectBrowser {
 				return new ChromeDriver();
 
 			} else if (browser.equalsIgnoreCase("firefox")) {
+				System.setProperty("webdriver.firefox.driver", firefoxdriver_linux);
 				return new FirefoxDriver();
 			} else {
 				logger.error("The [" + browser + "]" + " explorer does not apply to  [" + currentPlatform + "] OS");

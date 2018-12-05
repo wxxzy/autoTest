@@ -2,7 +2,7 @@
 <!-- thread-count 定义同时启动的浏览器数 、parallel="tests" 表明每个test都是平级的 -->
 <suite name="selenium_2_combat" parallel="tests" thread-count="2">
 	<!-- chrome,firefox,ghost和ie不区分大小写 -->
-	<parameter name="browserName" value="firefox" />
+	<parameter name="browserName" value="chrome" />
 	<!-- driver的属性配置文件保存路径 -->
 	<parameter name="driverConfgFilePath" value="config/driver.properties" />
 	<!-- 定义测试的站点 -->
