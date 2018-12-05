@@ -2,12 +2,13 @@
 <!-- thread-count 定义同时启动的浏览器数 、parallel="tests" 表明每个test都是平级的 -->
 <suite name="selenium_2_combat" parallel="tests" thread-count="2">
 	<!-- chrome,firefox,ghost和ie不区分大小写 -->
-	<parameter name="browserName" value="chrome" />
+	<parameter name="browserName" value="ie" />
 	<!-- driver的属性配置文件保存路径 -->
 	<parameter name="driverConfgFilePath" value="config/driver.properties" />
 	<!-- 定义测试的站点 -->
 	<!--<parameter name="testurl" value="http://192.168.1.119:9009/vr-web/login.jsp" />--><!--福建农信-->
-	<parameter name="testurl" value="http://test.vpcloud.com:8080/valm/vpreact/login.html" /><!--新版本-->
+	<!--<parameter name="testurl" value="http://test.vpcloud.com:8080/valm/vpreact/login.html" />--><!--新版本-->
+	<parameter name="testurl" value="http://www.baidu.com" /><!--新版本-->
 	<!-- 进程等待1秒中的控制时间 -->
 	<parameter name="sleepTime" value="800" />
 	<!-- 页面元素10秒不出现超时时间 -->
@@ -16,13 +17,12 @@
 	<parameter name="waitMillisecondsForAlert" value="40000" />
 	<!-- 定义测试模块，用test标签包围 -->
 	
-	<test name="Login" preserve-order="true">
+	<test name="Search" preserve-order="true">
 		<!--<packages>
 			<package name="com.demo.test.testcases.login" />
 		</packages>-->
         <classes>
-            <class name="com.demo.test.testcases.login.LoginPage_001"/>
-			<!--<class name="com.demo.test.testcases.upload.UploadFile_001"/>-->
+            <class name="com.demo.test.testcases.baidu.BaiduSearch_001"/>
         </classes>
 
 	</test> 

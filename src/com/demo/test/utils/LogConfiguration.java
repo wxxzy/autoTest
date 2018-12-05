@@ -31,7 +31,6 @@ public class LogConfiguration {
 
 		}
 		
-		
 	    /**取得模块名字*/
 	    public static String getFunctionName(String fileName){
 			String functionName = null; 
